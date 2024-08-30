@@ -30,4 +30,4 @@ A **CDN (Content Delivery Network)** is a system of distributed servers that del
 - **Example:**
   ```html
   <script src="https://example.com/some-script.js" crossorigin></script>
-  // I will Come SoonAfter The Insem
+  
