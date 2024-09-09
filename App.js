@@ -1,33 +1,33 @@
-import React from 'react';
-{
-  /*
-     <div id="parent">
-    <div id ="child">
-        <h1>Hello Parm Dev From Nested react..!!</h1>
-        <h2>Hello Parm Dev From Nested 2 react..!!</h2>
-    </div>
-</div> 
-*/
-}
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-// How WE Create using Ract This Structure
-
+// Using React
 const heading = React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement(
-    "div",
-    { id: "child" },
-    [React.createElement("h1", {}, "Parm Dev From Nested React") ,React.createElement("h1", {}, "Parm Dev From Nested React") ]
-  )
+  "h1",
+  { id: "heading" },
+  " Hello Parm Dev..!!"
 );
 
-// const heading = React.createElement(
-//   "h1",
-//   { id: "heading" },
-//   "Hello Parm Dev From React..!!"
-// );
+// using jsx
+const jsxheading = <h1 id="heading">Hello Parm Dev from Jsx</h1>;
+
+// React Element
+const heading2 = <h1 className="header">Parm Dev From React Element</h1>;
+// Tiitle Component
+const Tiittle = () => {
+  return <h1 className="head">Hello Parm Dev from Title Component</h1>;
+};
+
+// React functional Componenets
+const HeadingComponnent = () => (
+    <div>
+      <Tiittle />
+      <h1>Hello Parm Dev from Functional Component</h1>
+    </div>
+  );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
-// console.log(root);
+// root.render(heading);
+// root.render(jsxheading); // This  is For the Element
+
+root.render(<HeadingComponnent />); // This  is For the Functional Component
