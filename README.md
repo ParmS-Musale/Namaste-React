@@ -87,7 +87,35 @@ A **CDN (Content Delivery Network)** is a system of distributed servers that del
 **Answer**: A transitive dependency is a dependency of a dependency. If your project depends on `Library B`, and `Library B` depends on `Library C`, then `Library C` is a transitive dependency for your project.
 
 ---
+# Namaste React - Day 3 🚀
 
+## 1. What is the Difference Between React Elements and Components?
+
+### **React Elements**
+- **Definition**: React elements are the basic building blocks of a React application. They describe what should appear on the screen and are immutable.
+- **Characteristics**: Simple units of UI, created using JSX or `React.createElement()`. They don't have internal logic or state.
+
+### **React Components**
+- **Definition**: React components are reusable pieces of UI that can be composed together to build more complex UIs. They can be functional or class-based.
+- **Characteristics**: Components can manage state, accept props, and contain logic. They can return React elements and can be composed into other components.
+
+## 2. What is Component Composition?
+
+### **Definition**
+- **Concept**: Component composition is the practice of combining multiple React components to build more complex UIs. It involves using components as building blocks to create a complete UI layout.
+- **Benefits**: Enhances modularity and reusability, allowing for cleaner and more maintainable code. It helps in breaking down complex UIs into simpler, manageable parts.
+
+## 3. How to Correct Common Syntax Errors in Functional Components?
+
+### **Common Errors and Corrections**
+- **Error**: Using incorrect syntax for returning JSX, such as mixing `return` statements with parentheses.
+- **Correction**: Ensure that the JSX returned from a functional component is enclosed correctly within parentheses without the `return` keyword if using implicit returns. For explicit returns, use the `return` keyword properly.
+
+## 4. What is JSX and How is it Used?
+
+### **Definition**
+- **JSX**: JSX stands for JavaScript XML. It is a syntax extension for JavaScript that allows writing HTML-like code within JavaScript files. It makes it easier to describe what the UI should look like.
+- **Usage**: JSX is compiled by tools like Babel into `React.createElement()` calls, which create React elements that are used to render the UI. It provides a more readable and expressive way to create elements compared to plain JavaScript.
 
 
 
