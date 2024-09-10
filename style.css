@@ -1,3 +1,107 @@
-#heading{
-    color: rgb(212, 144, 18);
+/* Header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  border-bottom: 1px solid #ddd; /* Lighter border for subtle separation */
+  padding: 10px 20px; /* Add padding for better spacing */
+  background-color: #fff; /* White background for the header */
+}
+
+.logo {
+  width: 120px;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.nav-items > ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  font-size: 18px; /* Slightly smaller font size for better balance */
+  list-style: none;
+}
+
+.nav-items > ul > li {
+  padding: 10px 20px; /* Add horizontal padding */
+  margin: 0 5px; /* Reduce margin for tighter spacing */
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+.nav-items > ul > li:hover {
+  color: #fff; /* White text on hover */
+  background-color: #333; /* Dark background on hover */
+  border-radius: 4px; /* Rounded corners for hover effect */
+}
+
+/* Restaurant card container styling */
+.res-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap onto new lines */
+  justify-content: center; /* Center cards horizontally */
+  gap: 20px; /* Add space between cards */
+  padding: 20px; /* Add padding around the container */
+}
+
+/* Search bar styling */
+.search {
+  padding: 10px;
+  font-size: 18px;
+  background-color: #f1f1f1; /* Light gray background */
+  border: 1px solid #ddd; /* Lighter border */
+  border-radius: 20px; /* Rounded corners */
+  margin: 20px; /* Add margin around the search bar */
+  text-align: center; /* Center text */
+}
+
+/* Restaurant card styling */
+.res-card {
+  background-color: #fff; /* White background for cards */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+  padding: 20px; /* Increased padding inside card */
+  max-width: 350px; /* Fixed max-width for cards */
+  min-height: 400px; /* Fixed height to ensure cards are equal size */
+  margin: 10px; /* Add margin around each card */
+  text-align: center; 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  justify-content: space-between; /* Distribute space evenly */
+}
+
+.res-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.res-logo {
+  width: 100%;
+  border-radius: 12px 12px 0 0; /* Rounded corners at the top */
+  object-fit: cover; /* Ensure the image fits well */
+  height: 200px; /* Fixed height for the image */
+  margin-bottom: 10px; /* Add space below the image */
+}
+
+h3 {
+  font-size: 1.75em; /* Larger font size for the restaurant name */
+  color: #333; /* Darker text color */
+  margin: 10px 0; /* Add margin above and below */
+}
+
+h4 {
+  font-size: 1em; /* Standard size for the details */
+  color: #666; /* Lighter gray for secondary info */
+  margin: 5px 0; /* Add vertical margin */
+}
+
+.res-card h4:nth-of-type(2) {
+  margin-top: 10px;
+  color: #ff9800; /* Orange for rating */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+.res-card h4:nth-of-type(3) {
+  margin-top: 5px;
+  color: #4caf50; /* Green for delivery time */
 }
