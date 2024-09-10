@@ -117,5 +117,22 @@ A **CDN (Content Delivery Network)** is a system of distributed servers that del
 - **JSX**: JSX stands for JavaScript XML. It is a syntax extension for JavaScript that allows writing HTML-like code within JavaScript files. It makes it easier to describe what the UI should look like.
 - **Usage**: JSX is compiled by tools like Babel into `React.createElement()` calls, which create React elements that are used to render the UI. It provides a more readable and expressive way to create elements compared to plain JavaScript.
 
+# Namaste React - Day 4 🚀
+
+## 1. Cloudinary
+- **Definition**: Cloudinary is a cloud-based service for managing images and videos, providing features like optimization, transformation, and delivery.
+- **Common Error**: `404 (Not Found)` indicates the requested image or resource could not be found. This often means the URL is incorrect or the resource has been deleted.
+
+## 2. Carousel
+- **Definition**: A carousel is a component that allows users to cycle through a series of items, typically images or content, in a slideshow format. It’s used to display multiple pieces of content in a confined space with navigation controls.
+
+## 3. Props
+- **Definition**: Props (short for properties) are used to pass data from a parent component to a child component in React. They allow components to be dynamic and reusable by providing them with different inputs.
+
+## 4. Cuisine
+- **Definition**: Cuisine refers to a style or method of cooking, especially as characteristic of a particular country, region, or establishment. For example, Italian cuisine includes dishes like pasta and pizza.
+
+## 5. Conflict-Driven UI
+- **Definition**: Conflict-driven UI refers to designing user interfaces that handle and resolve conflicts in data or user actions effectively. It involves ensuring that the UI provides clear feedback and resolution paths when conflicting actions or states arise.
 
 
