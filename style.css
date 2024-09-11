@@ -54,6 +54,12 @@
   text-align: center; /* Center text */
 }
 
+/* Filter button styling */
+.filter-btn{
+  margin: 10px 20px;
+  cursor: pointer;
+  }
+
 /* Restaurant card styling */
 .res-card {
   background-color: #fff; /* White background for cards */
