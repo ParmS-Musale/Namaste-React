@@ -31,7 +31,7 @@
 .nav-items > ul > li:hover {
   color: #fff; /* White text on hover */
   background-color: #333; /* Dark background on hover */
-  border-radius: 4px; /* Rounded corners for hover effect */
+  border-radius: 10px; /* Rounded corners for hover effect */
 }
 
 /* Restaurant card container styling */
@@ -45,7 +45,7 @@
 
 /* Search bar styling */
 .search {
-  padding: 10px;
+  padding: 2px;
   font-size: 18px;
   background-color: #f1f1f1; /* Light gray background */
   border: 1px solid #ddd; /* Lighter border */
@@ -110,4 +110,118 @@ h4 {
 .res-card h4:nth-of-type(3) {
   margin-top: 5px;
   color: #4caf50; /* Green for delivery time */
+}
+
+/* Container for shimmer effect */
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between shimmer cards */
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Styling for each shimmer card */
+.shimmer-cards {
+  background-color: #e0e0e0; /* Light gray background for shimmer effect */
+  border-radius: 12px; /* Rounded corners to match card design */
+  width: 350px; /* Fixed width for shimmer cards */
+  height: 400px; /* Fixed height to match card design */
+  margin: 10px; /* Space around each shimmer card */
+  text-align: center;
+  position: relative; /* Ensure that pseudo-element is positioned correctly */
+  overflow: hidden; /* Hide the shimmer animation overflow */
+}
+
+/* Shimmer animation effect */
+.shimmer-cards::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+  animation: shimmer 1.5s infinite; /* Animation duration */
+}
+
+/* Keyframes for shimmer effect */
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Base styling for the login button */
+.login {
+  background-color: #bd0000; /* Blue background */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  padding: 12px 24px; /* Padding for the button */
+  font-size: 16px;
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Button hover effect */
+.login:hover {
+  background-color: #880000; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scale on hover */
+}
+.filter {
+  display: flex;
+}
+
+/* Styling for the search box */
+.search-box {
+  padding: 10px 15px;
+  width: 250px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-size: 16px;
+}
+
+/* Focused search box with blue border */
+.search-box:focus {
+  border-color: #007bff;
+}
+
+/* Styling for buttons */
+button {
+  padding: 10px 10px;
+  margin-left: 10px;
+  border: none;
+  background-color: #d97306; /* Primary blue color */
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover and active effects for buttons */
+button:hover {
+  background-color: #8a460e; /* Darker blue on hover */
+}
+
+button:active {
+  transform: scale(0.95); /* Slight shrink on click */
+}
+
+/* Specific styling for the filter button */
+.filter-btn {
+  background-color: #d97306; /* Green color for filter button */
+  height: 50px;
+  margin-top: 20px;
+}
+
+.filter-btn:hover {
+  background-color: #8a460e; /* Darker green on hover */
 }
