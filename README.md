@@ -135,4 +135,43 @@ A **CDN (Content Delivery Network)** is a system of distributed servers that del
 ## 5. Conflict-Driven UI
 - **Definition**: Conflict-driven UI refers to designing user interfaces that handle and resolve conflicts in data or user actions effectively. It involves ensuring that the UI provides clear feedback and resolution paths when conflicting actions or states arise.
 
+# Namaste React - Day 5 🚀
+
+## 1. Importance of the `src` folder
+- The `src` folder contains the source code of the application.
+- It organizes components, utilities, styles, and logic, making it easier to manage.
+
+## 2. Types of Exports in JavaScript
+- **Named Export**: Allows exporting multiple things from a module.
+  - Example: `export const myVar = 42;`
+- **Default Export**: Only one default export is allowed per module.
+  - Example: `export default function() {...}`
+
+## 3. Can We Use Default Export with Named Export?
+- Yes, we can combine both in the same module.
+  - Example:
+    ```js
+    export const myVar = 42;
+    export default function() {...}
+    ```
+
+## 4. What are React Hooks?
+- Hooks are functions that let you use state and lifecycle features in functional components.
+- Common Hooks:
+  - `useState`: For state management.
+  - `useEffect`: For side effects like fetching data.
+  
+## 5. What is the Virtual DOM?
+- A lightweight copy of the actual DOM, maintained in memory.
+- React updates the Virtual DOM first, compares it with the real DOM, and only updates the necessary parts, improving performance.
+
+## 6. Types of Algorithms in React
+- **Diffing Algorithm**: React’s algorithm for comparing changes in the Virtual DOM with the actual DOM.
+  
+## 7. Reconciliation in React
+- The process where React updates the actual DOM based on changes detected in the Virtual DOM using the diffing algorithm.
+
+## 8. What is React Fiber?
+- A new reconciliation engine in React 16+.
+- Improves performance by breaking down the rendering process into units of work and prioritizing tasks.
 
