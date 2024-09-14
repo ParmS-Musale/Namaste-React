@@ -175,3 +175,6 @@ A **CDN (Content Delivery Network)** is a system of distributed servers that del
 - A new reconciliation engine in React 16+.
 - Improves performance by breaking down the rendering process into units of work and prioritizing tasks.
 
+# Namaste React - Day 6 🚀
+#### 1. What is Shimmer?
+Shimmer is a placeholder UI component used to indicate loading states. It typically displays a skeleton or shimmer effect to mimic the layout of the content that will be loaded, improving user experience by giving a visual cue that data is being fetched.
