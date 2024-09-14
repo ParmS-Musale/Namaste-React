@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import { RESTAURANTLIST_URL } from "../utils/constant";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   // Local State Variable - Super powerful variable
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
-  const [filteredRestaurants , setFilteredRestaurants] = useState([]);
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
   const [searchText, setSearchText] = useState("");
 
@@ -23,7 +24,7 @@ const Body = () => {
       console.log(json);
 
       setListOfRestaurants(json);
-      setFilteredRestaurants(json); 
+      setFilteredRestaurants(json);
     } catch (error) {
       console.error("Error fetching data: ", error);
     }
@@ -69,7 +70,9 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredRestaurants?.map((restaurant) => (
-          <RestaurantCard key={restaurant?.id} resData={restaurant} />
+          <Link key={restaurant?.id} to={"/restaurant/" + restaurant?.id}>
+            <RestaurantCard key={restaurant?.id} resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>
