@@ -196,8 +196,8 @@ Shimmer is a placeholder UI component used to indicate loading states. It typica
 
    - **useRouterError**:
      - Provides error handling for routes that don't match any defined paths, enabling error boundary display.
-     - 
-     # Namaste React - Day 8 🚀
+    
+# Namaste React - Day 8 🚀
 
 1. **Class-Based Components:**
    - In React, class components extend `React.Component`.
