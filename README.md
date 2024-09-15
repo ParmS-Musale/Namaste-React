@@ -180,7 +180,7 @@ A **CDN (Content Delivery Network)** is a system of distributed servers that del
 Shimmer is a placeholder UI component used to indicate loading states. It typically displays a skeleton or shimmer effect to mimic the layout of the content that will be loaded, improving user experience by giving a visual cue that data is being fetched.
 
 # Namaste React - Day 7 🚀
-## Topics Covered:
+
 1. **React Router DOM**:
    - **Why use React Router DOM?**  
      React Router DOM allows you to implement dynamic routing in a web app, which helps in rendering different components or pages based on the URL.
@@ -196,4 +196,35 @@ Shimmer is a placeholder UI component used to indicate loading states. It typica
 
    - **useRouterError**:
      - Provides error handling for routes that don't match any defined paths, enabling error boundary display.
+     - 
+     # Namaste React - Day 8 🚀
 
+1. **Class-Based Components:**
+   - In React, class components extend `React.Component`.
+   - They have lifecycle methods such as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`.
+   - Use a constructor to initialize the state using `this.state`.
+
+2. **State in Class Components:**
+   - State is defined as an object, and updates to state are done using `this.setState()`.
+   - Example:
+     ```js
+     this.state = { key: value };
+     this.setState({ key: newValue });
+     ```
+
+3. **Props in Class Components:**
+   - Props are passed to the component and accessed via `this.props`.
+   - Props are read-only, used to display dynamic data.
+
+4. **Lifecycle Methods:**
+   - `componentDidMount()`: Executed after the component is rendered for the first time. Used for side effects such as API calls.
+   - `componentDidUpdate()`: Runs after the component updates.
+   - `componentWillUnmount()`: Cleanup actions like clearing timers or subscriptions.
+
+5. **Fetching Data with Lifecycle Methods:**
+- API calls are made inside `componentDidMount()`.
+- Data can be stored in the state and rendered on the UI.
+
+6. **Handling Component Updates:**
+-Lifecycle methods handle the process of fetching, updating, and displaying data.
+- React efficiently manages DOM updates when state changes.
