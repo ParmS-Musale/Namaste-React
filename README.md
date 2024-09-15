@@ -178,3 +178,22 @@ A **CDN (Content Delivery Network)** is a system of distributed servers that del
 # Namaste React - Day 6 🚀
 #### 1. What is Shimmer?
 Shimmer is a placeholder UI component used to indicate loading states. It typically displays a skeleton or shimmer effect to mimic the layout of the content that will be loaded, improving user experience by giving a visual cue that data is being fetched.
+
+# Namaste React - Day 7 🚀
+## Topics Covered:
+1. **React Router DOM**:
+   - **Why use React Router DOM?**  
+     React Router DOM allows you to implement dynamic routing in a web app, which helps in rendering different components or pages based on the URL.
+   
+   - **createBrowserRouter**:
+     - A method in `react-router-dom` used to create the browser's routing system. It handles navigation via the URL.
+   
+   - **RouterProvider**:
+     - This component is used to wrap your app and provide the router configuration to all child components.
+
+   - **useParams**:
+     - Hook that lets you extract dynamic parameters from the URL, such as an `id` of a restaurant or user.
+
+   - **useRouterError**:
+     - Provides error handling for routes that don't match any defined paths, enabling error boundary display.
+
