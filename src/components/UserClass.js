@@ -5,59 +5,39 @@ class UserClass extends React.Component {
     super(props);
 
     this.state = {
-      count: 0,
+      userInfo: {
+        name: "Dummy",
+        location: "default",
+        email: "dummy@gmail.com",
+      },
     };
-    console.log(this.props.name +"Childern Constructor");
+
+    // console.log(this.props.name + "Childern Constructor");
   }
 
-  componentDidMount() {
-    console.log(this.props.name +"Child Compoponent didMount");
+  async componentDidMount() {
+    // console.log(this.props.name + "Child Compoponent didMount");
+    const data = await fetch("https://api.github.com/users/ParmS-Musale");
+    const json = await data.json();
+    console.log(json);
+
+    this.setState({ userInfo: json });
   }
 
   render() {
-    const { name, Location } = this.props;
-    const { count, count1 } = this.state;
-    console.log(this.props.name +"Child Renderer");
+    // console.log(this.props.name + "Child Renderer");
+    const { name, location, email, avatar_url } = this.state.userInfo;
 
     return (
       <div className="user-card">
         <header>Class Based Component</header>
-
-        <h1>Count: {count}</h1>
-        <button
-          onClick={() => {
-            this.setState({
-              count: count + 1,
-            });
-          }}
-        >
-          Touch Me 😘
-        </button>
+        <img src={avatar_url} alt="" />
         <h1>Name: {name}</h1>
-        <h2>Location: {Location}</h2>
-        <p>Contact: musaleparm9541@gmail.com</p>
+        <h2>Location: {location}</h2>
+        <p>Email: {email}</p>
       </div>
     );
   }
 }
 
 export default UserClass;
-
-
-/****
- *
- * --- MOUNTING ----
- *
- * Constructor (dummy)
- * Render (dummy)
- *      <HTML Dummy >
- * Component Did MOunt
- *      <API Call>
- *      <this.setState> -> State variable is updated
- *
- * ---- UPDATE
- *
- *      render(APi data)
- *      <HTML (new API data>)
- *      ccomponentDid Update
- */
