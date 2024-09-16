@@ -5,3 +5,5 @@ export const LOGO_URL ="https://www.logodesign.net/logo/smoking-burger-with-lett
 export const RESTAURANTLIST_URL ="https://mocki.io/v1/d8158884-05a5-435d-a13b-e2a94feeac45"
 
 export const MENU_API_URL = "https://mocki.io/v1/20f87c98-d65e-4235-878c-4260b4d65191"
+
+export const GITHUB_API_URL = "https://api.github.com/users/ParmS-Musale"

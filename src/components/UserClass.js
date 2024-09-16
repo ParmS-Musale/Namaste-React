@@ -1,4 +1,5 @@
 import React from "react";
+import { GITHUB_API_URL } from "../utils/constant.js";
 
 class UserClass extends React.Component {
   constructor(props) {
@@ -9,32 +10,35 @@ class UserClass extends React.Component {
         name: "Dummy",
         location: "default",
         email: "dummy@gmail.com",
+        avatar_url: "",
       },
     };
-
-    // console.log(this.props.name + "Childern Constructor");
   }
 
   async componentDidMount() {
-    // console.log(this.props.name + "Child Compoponent didMount");
-    const data = await fetch("https://api.github.com/users/ParmS-Musale");
-    const json = await data.json();
-    console.log(json);
-
-    this.setState({ userInfo: json });
+    try {
+      const data = await fetch(GITHUB_API_URL);
+      const json = await data.json();
+      this.setState({ userInfo: json });
+    } catch (error) {
+      console.error("Error fetching user info:", error);
+    }
   }
 
   render() {
-    // console.log(this.props.name + "Child Renderer");
     const { name, location, email, avatar_url } = this.state.userInfo;
 
     return (
-      <div className="user-card">
-        <header>Class Based Component</header>
-        <img src={avatar_url} alt="" />
-        <h1>Name: {name}</h1>
-        <h2>Location: {location}</h2>
-        <p>Email: {email}</p>
+      <div className="bg-white shadow-md rounded-lg p-6 max-w-sm mx-auto my-4 border border-gray-200">
+        <header className="text-xl font-semibold mb-4">Class Based Component</header>
+        <img
+          src={avatar_url}
+          alt="User Avatar"
+          className="w-24 h-24 rounded-full mx-auto mb-4 border border-gray-300"
+        />
+        <h1 className="text-2xl font-bold mb-2">Name: {name}</h1>
+        <h2 className="text-xl text-gray-600 mb-2">Location: {location}</h2>
+        <p className="text-gray-800">Email: {email}</p>
       </div>
     );
   }
