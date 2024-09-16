@@ -3,6 +3,7 @@ import RestaurantCard from "./RestaurantCard";
 import { RESTAURANTLIST_URL } from "../utils/constant";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   // Local State Variable - Super powerful variable
@@ -29,6 +30,15 @@ const Body = () => {
       console.error("Error fetching data: ", error);
     }
   };
+
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false)
+    return (
+      <h1>
+        Look's Like You Are Offline..!! Please Check Your Internet Connection
+      </h1>
+    );
 
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
