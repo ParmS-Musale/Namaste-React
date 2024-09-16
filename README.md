@@ -228,3 +228,49 @@ Shimmer is a placeholder UI component used to indicate loading states. It typica
 6. **Handling Component Updates:**
 -Lifecycle methods handle the process of fetching, updating, and displaying data.
 - React efficiently manages DOM updates when state changes.
+
+# Namaste React - Day 9 🚀
+
+1. **Custom Hooks**:
+   - Functions that allow reusability of logic across different components.
+   - Example: Fetching restaurant menu data using `useRestaurantMenu` hook.
+
+2. **useEffect Hook**:
+   - Used to handle side effects in React.
+   - Runs after every render unless dependencies are specified.
+   - Commonly used to fetch data, add event listeners, or manipulate DOM.
+
+3. **Fetching API Data**:
+   - Fetching data with `fetch` inside `useEffect` and handling async operations.
+   - Updates state once data is retrieved successfully.
+
+4. **CORS (Cross-Origin Resource Sharing)**:
+   - Error occurs when a resource from a different domain is fetched without the correct headers.
+   - CORS policy is enforced by browsers for security.
+   
+5. **Online Event Listener**:
+   - An event listener that checks for the online/offline status of a user's browser.
+   - `window.addEventListener("online", callback)` can be used to detect when a user goes online.
+   
+6. **Lazy Loading**:
+   - A performance optimization technique in React to load components on demand.
+   - React’s `React.lazy()` function is used to load components only when they are required.
+
+7. **Suspense in React**:
+   - React’s feature to show fallback content (e.g., a loading spinner) while lazy-loaded components are being fetched.
+   - It works with `React.lazy()` to make the UI more user-friendly by displaying a fallback UI until the component is fully loaded.
+
+8. **Chunking, Code Splitting, and Dynamic Bundling**:
+   - **Chunking**: Breaking large files into smaller parts or "chunks".
+   - **Code Splitting**: Dynamically loading parts of the application to reduce initial load time.
+   - **Dynamic Bundling**: Only the required code is bundled based on how the app is being used.
+   - **On-Demand Loading**: Load only what is required, deferring unnecessary code until later.
+  
+ 9.  **Lazy Loading**:
+     - A performance optimization technique in React to defer loading of components until they're needed.
+     - Use `React.lazy()` to load components dynamically only when they are rendered.
+     - Reduces the initial load time by splitting the code and loading the required part on demand.
+
+10. **Suspense**:
+     - Works with `React.lazy()` to allow React to display a fallback UI (like a loading spinner) while the lazy-loaded component is being fetched.
+
