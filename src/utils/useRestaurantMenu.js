@@ -9,11 +9,17 @@ const useRestaurantMenu = (id) => {
   }, [id]);
 
   const fetchMenu = async () => {
-    const data = await fetch(MENU_API_URL);
-    const json = await data.json();
+    try {
+      const response = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.61610&lng=73.72860&restaurantId=${id}&catalog_qa=undefined&submitAction=ENTER`);
+      const data = await response.json(); // Corrected line
 
-    const filterdata = json?.filter((res) => res?.restaurantId === id); // Filter by restaurant ID
-    setResinfo(filterdata);
+      console.log(data);
+      console.log(data?.data?.cards);
+
+      setResinfo(data);
+    } catch (error) {
+      console.error("Error fetching menu data:", error);
+    }
   };
 
   return resInfo;
