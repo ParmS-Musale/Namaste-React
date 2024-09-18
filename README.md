@@ -275,7 +275,8 @@ Shimmer is a placeholder UI component used to indicate loading states. It typica
      - Works with `React.lazy()` to allow React to display a fallback UI (like a loading spinner) while the lazy-loaded component is being fetched.
 
 
-# Namaste React - Day 9 🚀
+# Namaste React - Day 10 🚀
+
 ## 1. **Inline Styles**
 
 ### Description
@@ -351,7 +352,76 @@ Shimmer is a placeholder UI component used to indicate loading states. It typica
 - **Learning Curve**: Requires learning the utility classes and framework conventions.
 - **Customization**: May require configuration to match specific design requirements or themes.
 
-## Conclusion
-- Each CSS styling approach has its own strengths and weaknesses. The choice depends on factors like project size, team preferences, and specific styling needs. Understanding the pros and cons of each can help in selecting the most appropriate method for your project.
+# Namaste React - Day 11 🚀
+
+1. **Higher Order Components (HOC)**:
+   - A function that takes a component as input and returns a new component.
+   - Useful for code reuse and logic separation in React apps.
+
+2. **Rendering Patterns**:
+   - Use of `React.createContext()` to create context and pass data without props drilling.
+   - How `Context.Provider` works to pass values down to nested components.
+
+3. **Suspense and Lazy Loading**:
+   - `React.lazy()` used for dynamic imports to load components lazily.
+   - `Suspense` handles loading fallback until the lazy-loaded component is ready.
+
+4. **useEffect Hook**:
+   - Demonstrated making API calls and updating state within `useEffect`.
+   - Ensuring cleanup and effect dependency management.
+
+5. **User Context Implementation**:
+   - How to implement and use `UserContext` for global state across components.
+   - Passing the user object via context, allowing components to consume the context data.
+
+6. **Routing in React**:
+   - Dynamic routing with `react-router-dom` and nested routes using `Outlet`.
+   - Error handling routes with `errorElement`.
+
+7. **Optimizing Performance**:
+   - Lazy loading components to optimize performance.
+   - Minimizing re-renders with appropriate use of state and context.
+
+8. **API Call Simulation**:
+   - Simulated API call inside `useEffect` and updating state.
+   - Using state to display dynamic data (e.g., username).
+  
+   ## What are Higher Order Components (HOC)?
+
+**Higher Order Components (HOC)** are functions in React that take a component as input and return a new component. They enable code reusability and logic sharing across multiple components without modifying the component itself. HOCs are often used to inject additional props, handle state, or enhance the original component with extra functionality.
+
+Example use cases:
+- Authentication handling
+- Caching data
+- Logging
+
+---
+
+## What is Lifting State Up?
+
+**Lifting State Up** refers to moving the shared state to the closest common ancestor of the components that need it. In React, this is necessary when two or more components need to share the same data. By lifting the state up, it can be passed down as props, ensuring that the shared state is centralized and the components stay in sync.
+
+---
+
+## What is Props Drilling?
+
+**Props Drilling** is the process of passing data from a parent component to a deeply nested child component through multiple layers of intermediate components. This can lead to complex and difficult-to-manage code, especially when many components don’t use the props themselves but are required to pass them down the tree.
+
+---
+
+## What is React Context?
+
+**React Context** provides a way to share values (like global state) between components without having to explicitly pass props down through every level of the component tree. By using `React.createContext()`, values can be provided via a `Context.Provider` and consumed anywhere in the component hierarchy with `useContext`.
+
+Use cases:
+- User authentication data
+- Theme settings (light/dark mode)
+- Language preferences
+
+---
+
+## What is UserContext Provider?
+
+The **UserContext Provider** in React is a part of the Context API that allows global state management. The provider component allows us to supply values to all the child components within its tree, so these components can consume the context without having to pass props down manually. It helps in avoiding props drilling and makes the code more scalable.
 
 
