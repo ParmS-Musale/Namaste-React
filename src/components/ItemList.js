@@ -15,7 +15,7 @@ const ItemList = ({ items }) => {
               <span className="text-lg font-semibold text-gray-900">
                 {item?.card?.info?.name}
               </span>
-              <span className="text-gray-900 ml-2">
+              <span className="text-gray-900 ml-2 font-semibold">
                 - ₹
                 {(item?.card?.info?.price || item?.card?.info?.defaultPrice) /
                   100}

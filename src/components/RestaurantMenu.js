@@ -3,11 +3,13 @@ import Shimmer from "./Shimmer";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantCard from "./RestaurantCard";
 import RestaurantCatogry from "./RestaurantCatogry";
+import { useState } from "react";
 
 const RestaurantMenu = () => {
   const { id } = useParams(); // Capture restaurant ID from URL
-
+  const dummy  = "Dummy Data"
   const resInfo = useRestaurantMenu(id);
+  const [showIndex, setShowIndex] = useState(0)
 
   if (!resInfo.data?.cards?.length) return <Shimmer />;
 
@@ -23,19 +25,27 @@ const RestaurantMenu = () => {
   console.log("filter", filterData);
 
   return (
-    <div className="p-10 max-w-4xl mx-auto bg-gray-100">
+    <div className="p-10 max-w-4xl mx-auto bg-gray-100 text-center">
       <div className="bg-white shadow-lg rounded-lg overflow-hidden mb-6">
         <div className="p-6">
           <h1 className="text-3xl font-bold text-gray-800 mb-2">
             {data?.name}
           </h1>
-          <p className="text-lg text-gray-600 mb-1">{data?.locality}</p>
-          <p className="text-lg text-gray-600 mb-4">
+          <p className="text-lg text-gray-600 mb-1 font-semibold">{data?.locality}</p>
+          <p className="text-lg text-gray-600 mb-4 font-semibold">
             {data?.costForTwoMessage}
           </p>
 
-          {filterData?.map((category) => {
-            return <RestaurantCatogry data={category?.card?.card} />;
+          {filterData?.map((category , index) => {
+            return (
+              <RestaurantCatogry
+                key={category?.card?.card.title}
+                data={category?.card?.card}
+                showItem={index === showIndex ? true : false}
+                setShowIndex={() => {setShowIndex(index)}}
+                dummy = {dummy}
+              />
+            );
           })}
         </div>
       </div>
