@@ -424,4 +424,26 @@ Use cases:
 
 The **UserContext Provider** in React is a part of the Context API that allows global state management. The provider component allows us to supply values to all the child components within its tree, so these components can consume the context without having to pass props down manually. It helps in avoiding props drilling and makes the code more scalable.
 
+# Namaste React - Day 12 🚀
+
+### 1. **Redux Fundamentals**
+   - Introduction to Redux as a state management library.
+   - The concept of having a **single source of truth**.
+   - Use of **actions**, **reducers**, and **store** to manage the state.
+
+### 2. **Redux Toolkit (RTK)**
+   - Simplified approach to work with Redux using **@reduxjs/toolkit**.
+   - Explanation of **configureStore**, **createSlice** for state management.
+   - Discussed Redux DevTools for easy state inspection.
+
+### 3. **Provider and Connect in Redux**
+   - The role of **Provider** to make the Redux store available to all components.
+   - Using **useSelector** and **useDispatch** hooks to interact with Redux in functional components.
+
+### 4. **Understanding Immer**
+   - **Immer** is used internally by Redux Toolkit to allow immutable updates.
+   - Explanation of how Immer simplifies state updates in reducers without manually copying the state.
+
+
+
 
