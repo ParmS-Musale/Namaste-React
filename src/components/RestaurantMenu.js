@@ -9,12 +9,12 @@ const RestaurantMenu = () => {
   const { id } = useParams(); // Capture restaurant ID from URL
   const dummy  = "Dummy Data"
   const resInfo = useRestaurantMenu(id);
-  const [showIndex, setShowIndex] = useState(0)
+  const [showIndex, setShowIndex] = useState()
 
   if (!resInfo.data?.cards?.length) return <Shimmer />;
 
   const data = resInfo?.data?.cards[2]?.card?.card?.info;
-  console.log("Menu", data);
+  // console.log("Menu", data);
   const filterData =
     resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
       (c) =>
@@ -22,7 +22,7 @@ const RestaurantMenu = () => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
-  console.log("filter", filterData);
+  // console.log("filter", filterData);
 
   return (
     <div className="p-10 max-w-4xl mx-auto bg-gray-100 text-center">

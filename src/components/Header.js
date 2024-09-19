@@ -3,16 +3,20 @@ import { LOGO_URL } from "../utils/constant.js";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import userContext from "../utils/userContext.js";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
 
   const onlineStatus = useOnlineStatus(); // Fetch online status from custom hook
 
-  const {loggedInUser} = useContext(userContext)
-  // console.log(loggedInUser);
-  
+  const { loggedInUser } = useContext(userContext);
 
+  
+  // Subscribe to The Store uSing Selector
+  const cartItem = useSelector((store) => store?.cart?.items);
+  console.log(cartItem);
+  
   return (
     <div className="flex justify-between items-center p-4 bg-gray-600 shadow-lg">
       {/* Logo Section */}
@@ -22,6 +26,7 @@ const Header = () => {
           Food Ordering App
         </span>
       </div>
+      {/* DONE ka OK Boss okkk fuck tou YOIU tOOOO thank you Byeeeeeeeeeee */}
 
       {/* Navigation Items */}
       <div className="flex space-x-4">
@@ -39,11 +44,7 @@ const Header = () => {
               About
             </Link>
           </li>
-          <li>
-            <Link to="/cart" className="text-white hover:text-yellow-300">
-              Cart
-            </Link>
-          </li>
+
           <li>
             <Link to="/contact" className="text-white hover:text-yellow-300">
               Contact
@@ -52,6 +53,11 @@ const Header = () => {
           <li>
             <Link to="/grocery" className="text-white hover:text-yellow-300">
               Grocery
+            </Link>
+          </li>
+          <li>
+            <Link to="/cart" className="text-white hover:text-yellow-300" >
+              Cart ({cartItem?.length}  Items)
             </Link>
           </li>
           <li className="font-semibold">{loggedInUser}</li>
@@ -68,8 +74,6 @@ const Header = () => {
         >
           {btnNameReact}
         </button>
-        
-        
       </div>
     </div>
   );
