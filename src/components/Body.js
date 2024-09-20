@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
-  // Local State Variable - Super powerful variable
+  // Local State Variables
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -39,7 +39,21 @@ const Body = () => {
       </h1>
     );
 
-  return listOfRestaurants.length === 0 ? (
+  const handleSearch = () => {
+    const filteredList = listOfRestaurants.filter((res) =>
+      res.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setFilteredRestaurants(filteredList);
+  };
+
+  const handleTopRatedFilter = () => {
+    const filteredList = listOfRestaurants.filter(
+      (res) => res.avgRating > 4
+    );
+    setFilteredRestaurants(filteredList);
+  };
+
+  return filteredRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body bg-gray-100">
@@ -57,12 +71,7 @@ const Body = () => {
           />
           <button
             className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-400"
-            onClick={() => {
-              const filteredRestaurant = listOfRestaurants?.filter((res) =>
-                res?.name.toLowerCase().includes(searchText.toLowerCase())
-              );
-              setListOfRestaurants(filteredRestaurant);
-            }}
+            onClick={handleSearch}
           >
             Search
           </button>
@@ -70,12 +79,7 @@ const Body = () => {
 
         <button
           className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-400"
-          onClick={() => {
-            const filteredList = listOfRestaurants?.filter(
-              (res) => res?.avgRating > 4
-            );
-            setListOfRestaurants(filteredList);
-          }}
+          onClick={handleTopRatedFilter}
         >
           Top Rated Restaurants
         </button>
@@ -83,19 +87,19 @@ const Body = () => {
 
       {/* Restaurant Cards Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
-        {filteredRestaurants?.map((restaurant) => (
+        {filteredRestaurants.map((restaurant) => (
           <Link
-            key={restaurant?.id}
-            to={"/restaurant/" + restaurant?.id}
+            key={restaurant.id}
+            to={"/restaurant/" + restaurant.id}
             className="block transform transition duration-300 hover:scale-105"
           >
             {restaurant.promoted ? (
               <RestaurantCardPromoted
-                key={restaurant?.id}
+                key={restaurant.id}
                 resData={restaurant}
               />
             ) : (
-              <RestaurantCard key={restaurant?.id} resData={restaurant} />
+              <RestaurantCard key={restaurant.id} resData={restaurant} />
             )}
           </Link>
         ))}

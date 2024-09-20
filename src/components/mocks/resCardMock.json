@@ -1,0 +1,22 @@
+{
+    "restaurantId": "522738",
+    "name": "Home Plate by EatFit",
+    "costForTwo": "₹250 for two",
+    "menu": [
+        {
+            "itemNumber": 1,
+            "dishName": "EatFit Special Pizza",
+            "price": "₹120"
+        },
+        {
+            "itemNumber": 2,
+            "dishName": "Veggie Pasta",
+            "price": "₹110"
+        },
+        {
+            "itemNumber": 3,
+            "dishName": "Classic Burger",
+            "price": "₹100"
+        }
+    ]
+}

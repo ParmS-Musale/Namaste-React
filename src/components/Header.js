@@ -12,11 +12,10 @@ const Header = () => {
 
   const { loggedInUser } = useContext(userContext);
 
-  
   // Subscribe to The Store uSing Selector
   const cartItem = useSelector((store) => store?.cart?.items);
-  console.log(cartItem);
-  
+  // console.log(cartItem);
+
   return (
     <div className="flex justify-between items-center p-4 bg-gray-600 shadow-lg">
       {/* Logo Section */}
@@ -56,8 +55,8 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/cart" className="text-white hover:text-yellow-300" >
-              Cart ({cartItem?.length}  Items)
+            <Link to="/cart" className="text-white hover:text-yellow-300">
+              Cart ({cartItem?.length} Items)
             </Link>
           </li>
           <li className="font-semibold">{loggedInUser}</li>
