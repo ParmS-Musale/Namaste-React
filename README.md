@@ -445,5 +445,57 @@ The **UserContext Provider** in React is a part of the Context API that allows g
    - Explanation of how Immer simplifies state updates in reducers without manually copying the state.
 
 
+# Namaste React - Day 13 🚀
+
+# Types of Testing
+
+## 1. **Unit Testing**
+   - Focuses on individual units or components.
+   - Ensures that each part of the application behaves as expected in isolation.
+   - Tools: Jest, Mocha, Jasmine.
+
+## 2. **Integration Testing**
+   - Tests how different modules or components work together.
+   - Ensures that integrated units function properly when combined.
+   - Tools: Cypress, Enzyme, Testing Library.
+
+## 3. **Functional Testing**
+   - Verifies that the software performs as per the specified functional requirements.
+   - Focuses on user-facing features.
+   - Tools: Selenium, Cucumber.
+
+## 4. **End-to-End (E2E) Testing**
+   - Simulates real user scenarios.
+   - Tests the complete application flow from start to finish.
+   - Tools: Cypress, Puppeteer, Protractor.
+
+## 5. **Performance Testing**
+   - Checks the application’s performance under load.
+   - Ensures the app responds well under stress and handles traffic spikes.
+   - Tools: Apache JMeter, LoadRunner.
+
+## 6. **Security Testing**
+   - Ensures the application is free of vulnerabilities.
+   - Focuses on safeguarding against threats and unauthorized access.
+   - Tools: OWASP ZAP, Burp Suite.
+
+## 7. **Smoke Testing**
+   - Basic tests to check if the major functionalities work.
+   - Ensures that the build is stable enough for further testing.
+
+## 8. **Regression Testing**
+   - Ensures that new changes haven’t affected existing features.
+   - Performed after bug fixes or feature additions.
+
+# Developer Testing
+
+**Developer Testing** refers to testing performed by the developers during the development process. It mainly includes:
+
+- **Unit Testing**: Ensuring individual components work as expected.
+- **Integration Testing**: Verifying the interaction between different modules.
+- **Debugging**: Detecting and fixing issues in code.
+- **Static Code Analysis**: Checking code for errors, security vulnerabilities, and coding standards.
+
+This testing ensures the quality of the codebase before it moves to the QA stage or production.
 
 
