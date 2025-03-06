@@ -1,4 +1,4 @@
-# Namaste React - Day 1 🚀
+# Namaste ReaCt - Day 1 🚀
 
 ## Introduction to React
 
